@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "csv": "^6.3.9",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
   }
 }
