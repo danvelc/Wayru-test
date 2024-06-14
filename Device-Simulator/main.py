@@ -20,11 +20,13 @@ while True:
 
   data = {"fecha": f_formateada ,"temperatura": temperatura, "humedad": humedad}
 
-  response = requests.post(url, json=data)
-
-  if response.status_code == 200:
-    print(f"Envio Exitoso - Fecha: {f_formateada}, Temperatura: {temperatura} C, Humedad: {humedad}%")
-  else:
-    print(f"Error al enviar data: {response.status_code}")
+  try:
+    response = requests.post(url, json=data)
+    if response.status_code == 200:
+      print(f"Envio Exitoso - Fecha: {f_formateada}, Temperatura: {temperatura} C, Humedad: {humedad}%")
+    else:
+      print(f"Error al enviar data: {response.status_code}")
+  except requests.exceptions.RequestException as e:
+    print(f"Error al enviar al Servidor")
 
   time.sleep(4)
