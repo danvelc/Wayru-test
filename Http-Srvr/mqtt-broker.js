@@ -1,6 +1,6 @@
 const mqtt = require('mqtt');
-const client = mqtt.connect('mqtt://test.mosquitto.org');
-const topic="temperatura-wayru"
+const client = mqtt.connect('mqtt://34.228.8.217');
+const topic="iot-wayru"
 
 client.on('connect', () => {
     console.log('Connected to MQTT broker.');

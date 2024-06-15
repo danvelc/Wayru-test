@@ -14,7 +14,7 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 
-app.listen(PORT, () => console.log(`Activo en http://localhost:${PORT}`)
+app.listen(PORT, () => console.log(`Activo en http://0.0.0.0:${PORT}`)
 )
 
 app.use(express.json());
@@ -48,9 +48,8 @@ app.post('/data', (req, res) => {
 
 //Setup de MQTT Protocol Subscription
 const mqtt = require('mqtt');
-const json = require('json');
-const client = mqtt.connect('mqtt://test.mosquitto.org');
-const topic="temperatura-wayru"
+const client = mqtt.connect('mqtt://34.228.8.217');
+const topic="iot-wayru"
 
 client.on('connect', () => {
     console.log('Connected to MQTT broker.');
