@@ -33,7 +33,10 @@ pip install -r requirements.txt
 # Instrucciones de Ejecución
 **Servidor**
 
+Se encuentra disponible un ambiente de prueba del servidor alojado en el siguiente enlace: [http://34.228.8.217:8080/data](http://34.228.8.217:8080/data)
+
 Para ejecutar el servidor ejecutar los siguientes comandos:
+
 ```shell
 cd Http-Srvr
 node .
